@@ -7,7 +7,7 @@ int main() {
     int n, t1, t2;
     int start, end;
     int returnTime, selectTime;
-    while(tc--){
+    for(int test = 1; test <= tc; test++){
         // %%%%% INPUT %%%%%%
         cin >> n;
         scanf("%d:%d", &t1, &t2); in = t1 * 60 + t2; 
@@ -36,27 +36,7 @@ int main() {
                 }
             }
         }
-        // // %%%%% LOGIC %%%%%
-        // int ans = -1;
-        // int minback = 9999;
-        // int tback = 0;
-        // for(int i = 0; i < n; i++){
-            
-        //     if(p + r < a){
-        //         if(a + r + s < h1[i]){
-        //             if(a + r + s < x){
-        //                 tback = a+r+s;
-        //                 if(tback < minback){
-        //                     minback = tback;
-        //                     ans = i;
-        //                 }
-        //             }
-        //         }
-        //     } 
-            
-        // }
         
-    
-        cout << "Case " << (tc+1) <<": " << (ansIndex) << endl;
+        cout << "Case " << (test) <<": " << (ansIndex) << endl;
     }
 }
