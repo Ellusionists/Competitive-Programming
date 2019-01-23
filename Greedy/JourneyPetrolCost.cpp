@@ -25,7 +25,7 @@ int main()
 			journeycost += minpetcost * l[i];
 		}
 		long int initialcost = costofpetrol[0];
-		for ( i = 0; i < mincostindex; ++i) {
+		for ( long int i = 0; i < mincostindex; ++i) {
 			journeycost += initialcost * l[i];
 			if(costofpetrol[i] < initialcost) {
 				journeycost -= initialcost * l[i];
