@@ -23,8 +23,8 @@ int main() {
 	for (int i = 0; i <= cities; ++i)
 	{
 		sort(graph[i].begin(), graph[i].end());
-		visited[cities] = false;
-		prev[cities] = -1;
+		visited[i] = false;
+		prev[i] = -1;
 	}
 
 	int source, destination;
