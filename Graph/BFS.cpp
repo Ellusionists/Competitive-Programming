@@ -8,13 +8,13 @@ int main() {
     cin >> V >> E;
 
     int temp1, temp2;
-    vector<int>[V] vertices;
+    vector<int> vertices[V];
     for(int i = 0; i < E; i++){
     	cin >> temp1 >> temp2;
     	vertices[temp1].push_back(temp2);
     	vertices[temp2].push_back(temp1);
     }
-    
+
     queue<int> nodes;
     bool visited[V];
 
@@ -27,17 +27,18 @@ int main() {
     std::vector<int>::iterator it;
 
     while(!(nodes.empty())){
-    	int top = nodes.front(); cout << top << " ";
+    	int top = nodes.front(); 
+    	cout << top << " ";
     	nodes.pop();
+
     	for(it = vertices[top].begin(); it != vertices[top].end(); it++){
     		if(!visited[(*it)]){
-	    		nodes.push((*it));
     			visited[(*it)] = true;
+    			nodes.push((*it));
+
     		}
     	}
     }
-
-    
-
-  return 0;
+    // cout << endl;
+	return 0;
 }
